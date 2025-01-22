@@ -83,7 +83,7 @@ Take the following steps to implement message sending:
      useRoomContext,
    } from "react-native-shengwang-chat-room";
 
-   const appKey = "<your app key>";
+   const appId = '<your app key>';
    const userNickname = "<your nick name>";
    const userAvatarURL = "<your avatar url>";
    const userName = "";
@@ -96,7 +96,7 @@ Take the following steps to implement message sending:
 
    function SendMessage() {
      const [page, setPage] = React.useState(0);
-     const [appkey, setAppkey] = React.useState(appKey);
+     const [appId, setAppId] = React.useState(appId);
      const [id, setId] = React.useState(userId);
      const [ps, setPs] = React.useState(userToken);
      const im = useRoomContext();
@@ -108,8 +108,8 @@ Take the following steps to implement message sending:
          <SafeAreaView style={styles.common}>
            <TextInput
              placeholder="Please App Key."
-             value={appkey}
-             onChangeText={setAppkey}
+             value={appId}
+             onChangeText={setAppId}
            />
            <TextInput
              placeholder="Please Login ID."
@@ -200,7 +200,7 @@ Take the following steps to implement message sending:
    function App(): React.JSX.Element {
      // initialize the chat room
      return (
-       <Container appKey={appKey}>
+       <Container appId={appId}>
          <SendMessage />
        </Container>
      );

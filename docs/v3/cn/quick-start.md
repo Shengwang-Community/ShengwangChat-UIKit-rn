@@ -107,7 +107,7 @@ import {
   useChatContext,
 } from 'react-native-shengwang-chat-uikit';
 
-const appKey = '<your app key>';
+const appId = '<your app key>';
 const userId = '<current login id>';
 const userPassword = '<current login password or token>';
 const usePassword = true; // or false;
@@ -115,7 +115,7 @@ const peerId = '<chat peer id>';
 
 function SendMessage() {
   const [page, setPage] = React.useState(0);
-  const [appkey, setAppkey] = React.useState(appKey);
+  const [appId, setAppId] = React.useState(appId);
   const [id, setId] = React.useState(userId);
   const [ps, setPs] = React.useState(userPassword);
   const [peer, setPeer] = React.useState(peerId);
@@ -127,8 +127,8 @@ function SendMessage() {
       <SafeAreaView style={{ flex: 1 }}>
         <TextInput
           placeholder="Please App Key."
-          value={appkey}
-          onChangeText={setAppkey}
+          value={appId}
+          onChangeText={setAppId}
         />
         <TextInput
           placeholder="Please Login ID."
@@ -198,7 +198,7 @@ function SendMessage() {
 function App(): React.JSX.Element {
   // 初始化 UIKit
   return (
-    <Container options={{ appKey: appKey, autoLogin: false }}>
+    <Container options={{ appId: appId, autoLogin: false }}>
       <SendMessage />
     </Container>
   );
@@ -232,14 +232,14 @@ export default App;
 在运行之前，编写好预置的必要参数；
 
 ```tsx
-const appKey = '<your app key>';
+const appId = '<your app key>';
 const userId = '<current login id>';
 const userPassword = '<current login password or token>';
 const usePassword = true; // or false;
 const peerId = '<chat peer id>';
 ```
 
-**如果修改了 appKey，则需要重启应用才会生效。**
+**如果修改了 appId，则需要重启应用才会生效。**
 
 运行之后，点击`登录`按钮进入聊天页面，输入文本内容，点击`发送`按钮，发送消息给对方。
 

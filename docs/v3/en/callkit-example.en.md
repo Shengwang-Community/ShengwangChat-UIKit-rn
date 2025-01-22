@@ -59,7 +59,7 @@ export function App() {
   return (
     <CallKitContainer
       option={{
-        appKey: gAppKey,
+        appId: '<your app ID>',
         agoraAppId: agoraAppId,
       }}
       type={accountType as any}

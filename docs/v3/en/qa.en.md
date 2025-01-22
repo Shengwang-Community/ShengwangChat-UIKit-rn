@@ -47,7 +47,7 @@ This is a current objective issue with React Native. It is advisable to use a ma
 
 #### Not Support for Remote references from GitHub
 
-Due to the repository's multi-package management and the dynamic generation of certain files, Git address references is impossible. However, local packaging services are currently available. The standalone `npm` packages that you generate by running `npm pack` in the specified directory (`packages/react-native-chat-uikit`) can be used locally.
+Due to the repository's multi-package management and the dynamic generation of certain files, Git address references is impossible. However, local packaging services are currently available. The standalone `npm` packages that you generate by running `npm pack` in the specified directory (`packages/react-native-shengwang-chat-uikit`) can be used locally.
 
 ## Specialized Issues
 

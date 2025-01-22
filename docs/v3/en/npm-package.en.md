@@ -14,7 +14,7 @@ In the `package.json` file, update the value of the `version` field.
 
 3. In the target project, modify the dependency path.
 
-For instance, in project A, in the `package.json` file, change the value of `react-native-chat-uikit` to `/Users/asterisk/Downloads/2024-04-19/react-native-chat-uikit-2.0.0-beta.0`.
+For instance, in project A, in the `package.json` file, change the value of `react-native-shengwang-chat-uikit` to `/Users/asterisk/Downloads/2024-04-19/react-native-shengwang-chat-uikit-2.0.0-beta.0`.
 
 ## Common Issues
 
@@ -24,4 +24,4 @@ This command may not work effectively for `react-native` projects with native mo
 
 2. Direct dependency via `repo`.
 
-As `uikit` is in a multi-package repository, this method cannot be used. For example: `yarn add git@https://github.com/AsteriskZuo/react-native-chat-library/tree/dev-2.1/packages/react-native-chat-uikit`.
+As `uikit` is in a multi-package repository, this method cannot be used. For example: `yarn add git@https://github.com/AsteriskZuo/react-native-chat-library/tree/dev-2.1/packages/react-native-shengwang-chat-uikit`.

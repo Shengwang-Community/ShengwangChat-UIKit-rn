@@ -107,7 +107,7 @@ import {
   useChatContext,
 } from 'react-native-shengwang-chat-uikit';
 
-const appKey = '<your app key>';
+const appId = '<your app key>';
 const userId = '<current login id>';
 const userPassword = '<current login password or token>';
 const usePassword = true; // or false;
@@ -115,7 +115,7 @@ const peerId = '<chat peer id>';
 
 function SendMessage() {
   const [page, setPage] = React.useState(0);
-  const [appkey, setAppkey] = React.useState(appKey);
+  const [appId, setAppId] = React.useState(appId);
   const [id, setId] = React.useState(userId);
   const [ps, setPs] = React.useState(userPassword);
   const [peer, setPeer] = React.useState(peerId);
@@ -127,8 +127,8 @@ function SendMessage() {
       <SafeAreaView style={{ flex: 1 }}>
         <TextInput
           placeholder="Please enter App Key."
-          value={appkey}
-          onChangeText={setAppkey}
+          value={appId}
+          onChangeText={setAppId}
         />
         <TextInput
           placeholder="Please enter Login ID."
@@ -199,7 +199,7 @@ function SendMessage() {
 function App(): React.JSX.Element {
   // Initialize UIKit
   return (
-    <Container options={{ appKey: appKey, autoLogin: false }}>
+    <Container options={{ appId: appId, autoLogin: false }}>
       <SendMessage />
     </Container>
   );
@@ -233,14 +233,14 @@ For Android applications, open the project in the `android` folder in Android St
 Before running, write the necessary preset parameters:
 
 ```tsx
-const appKey = '<your app key>';
+const appId = '<your app key>';
 const userId = '<current login id>';
 const userPassword = '<current login password or token>';
 const usePassword = true; // or false;
 const peerId = '<chat peer id>';
 ```
 
-**If you modify the appKey, you need to restart the application for the changes to take effect.**
+**If you modify the appId, you need to restart the application for the changes to take effect.**
 
 After running, click **Login** to open the chat page, enter the text content, and click **Send** to send a message to the recipient.
 

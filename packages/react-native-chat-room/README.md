@@ -41,7 +41,7 @@ Initialization
 import { Container } from 'react-native-shengwang-chat-room';
 export function App() {
   return (
-    <Container opt={{ appKey: '<your app key>' }}>
+    <Container opt={{ appId: '<your app ID>' }}>
       {/** sub component */}
     </Container>
   );

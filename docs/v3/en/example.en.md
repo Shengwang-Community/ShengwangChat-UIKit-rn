@@ -47,7 +47,7 @@ cd ios && pod install
 # For the android platform, run the sync of the android project.
 ```
 
-You need to fill in necessary parameters, for example: `appKey`, in the generated file `env.ts`.
+You need to fill in necessary parameters, for example: `appId`, in the generated file `env.ts`.
 
 ## Rest service
 
@@ -72,12 +72,12 @@ export function App() {
   return (
     <UIKitContainer
       options={{
-        appKey: gAppKey,
+        appId: '<your app ID>',
       }}
     >
       <CallKitContainer
         option={{
-          appKey: gAppKey,
+          appId: '<your app ID>',
           agoraAppId: agoraAppId,
         }}
         type={accountType as any}
@@ -532,7 +532,7 @@ export function App() {
   return (
     <UIKitContainer
       options={{
-        appKey: gAppKey,
+        appId: '<your app ID>',
       }}
       onGroupsHandler={onGroupsHandler}
       onUsersHandler={onUsersHandler}
@@ -612,7 +612,7 @@ export function App() {
   return (
     <UIKitContainer
       options={{
-        appKey: gAppKey,
+        appId: '<your app ID>',
       }}
     >
       {/* Other settings */}

@@ -52,7 +52,7 @@ Make sure you initialize the UIKit component library before using it. This secti
 
 ## Initialization
 
-There are many parameters to be set during initialization. You must pass in `appKey` and determine whether to log in automatically. Other parameters are optional. See the `ContainerProps` type for details [here](../../../packages/react-native-chat-uikit/src/container/types.tsx).
+There are many parameters to be set during initialization. You must pass in `appId` and determine whether to log in automatically. Other parameters are optional. See the `ContainerProps` type for details [here](../../../packages/react-native-shengwang-chat-uikit/src/container/types.tsx).
 
 ```tsx
 export function App() {
@@ -1023,12 +1023,12 @@ export function ConversationDetailScreen(props: Props) {
 
 The basic components include basic UI components and auxiliary components. As the foundation of business components, the basic UI components can be used to quickly build business components. It is also recommended to use these components to create custom components. Auxiliary components mainly provide media services, type check, property retrieval, and persistence processing.
 
-Basic UI components are located in `packages/react-native-chat-uikit/src/ui` [here](../../../packages/react-native-chat-uikit/src/ui).
-Hooks components are located in `packages/react-native-chat-uikit/src/hook` [here](../../../packages/react-native-chat-uikit/src/hook).
+Basic UI components are located in `packages/react-native-shengwang-chat-uikit/src/ui` [here](../../../packages/react-native-shengwang-chat-uikit/src/ui).
+Hooks components are located in `packages/react-native-shengwang-chat-uikit/src/hook` [here](../../../packages/react-native-shengwang-chat-uikit/src/hook).
 
 ## Event Dispatch
 
-When UI components need to be updated with data changes, events are dispatched to notify the corresponding components. This tool is located in `packages/react-native-chat-uikit/src/dispatch`.
+When UI components need to be updated with data changes, events are dispatched to notify the corresponding components. This tool is located in `packages/react-native-shengwang-chat-uikit/src/dispatch`.
 
 For example, when a group's name is changed, the group list, conversation list, chat page, and group details page need to handle this notification to synchronize the name change.
 

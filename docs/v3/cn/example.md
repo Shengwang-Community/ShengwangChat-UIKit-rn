@@ -46,7 +46,7 @@ cd ios && pod install
 # 如果是android平台 需要运行 android项目的sync
 ```
 
-生成文件 `env.ts` 需要填写必要参数。例如：`appKey`。
+生成文件 `env.ts` 需要填写必要参数。例如：`appId`。
 
 ## Rest 服务
 
@@ -70,12 +70,12 @@ export function App() {
   return (
     <UIKitContainer
       options={{
-        appKey: gAppKey,
+        appId: '<your app ID>',
       }}
     >
       <CallKitContainer
         option={{
-          appKey: gAppKey,
+          appId: '<your app ID>',
           agoraAppId: agoraAppId,
         }}
         type={accountType as any}
@@ -530,7 +530,7 @@ export function App() {
   return (
     <UIKitContainer
       options={{
-        appKey: gAppKey,
+        appId: '<your app ID>',
       }}
       onGroupsHandler={onGroupsHandler}
       onUsersHandler={onUsersHandler}
@@ -610,7 +610,7 @@ export function App() {
   return (
     <UIKitContainer
       options={{
-        appKey: gAppKey,
+        appId: '<your app ID>',
       }}
     >
       {/* 其它设置 */}

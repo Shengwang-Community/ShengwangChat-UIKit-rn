@@ -138,7 +138,7 @@ const light = useLightTheme(palette);
 const [theme, setTheme] = React.useState(light);
 // ...
 // Add the component to the render tree
-<Container appKey={env.appKey} palette={palette} theme={theme} />;
+<Container appId={env.appId} palette={palette} theme={theme} />;
 // ...
 // Change the theme setting
 setTheme(theme === light ? dark : light);
@@ -168,7 +168,7 @@ UIKit supports switching between multiple languages, currently built-in with Chi
 For example, to make UIKit display in English:
 
 ```tsx
-<Container appKey={env.appKey} language={'en'} />
+<Container appId={env.appId} language={'en'} />
 ```
 
 Language setting rules:
@@ -190,7 +190,7 @@ function createLanguage(type: LanguageCode): StringSet {
 // ...
 // Set the specified language set and provide the language translation source
 <Container
-  appKey={env.appKey}
+  appId={env.appId}
   language={'zh-Hans'}
   languageExtensionFactory={createLanguage}
 />;
@@ -226,7 +226,7 @@ export function createUIKitLanguage(type: LanguageCode): StringSet {
 }
 // ...
 <Container
-  appKey={env.appKey}
+  appId={env.appId}
   language={'fr'}
   languageBuiltInFactory={createUIKitLanguage}
   languageExtensionFactory={createAppLanguage}
@@ -239,7 +239,7 @@ The entry of the `Chatroom UIKit SDK` is the `Container` component, which is mai
 
 ```tsx
 export type ContainerProps = React.PropsWithChildren<{
-  appKey: string;
+  appId: string;
   isDevMode?: boolean;
   language?: StringSetType;
   languageBuiltInFactory?: CreateStringSet;
@@ -273,7 +273,7 @@ export type RoomOption = {
 };
 ```
 
-Except for `appKey`, all other parameters are optional.
+Except for `appId`, all other parameters are optional.
 
 - isDevMode: If set to `true`, activates log printing and other tools.
 - language: Sets the current language. If not set, the system's default language will be used.
@@ -300,7 +300,7 @@ The `Container` is usually at the bottom of the application, generally as the ro
 
 ```tsx
 export function App() {
-  return <Container appKey={'your app key'}>{children}</Container>;
+  return <Container appId={'your app key'}>{children}</Container>;
 }
 ```
 

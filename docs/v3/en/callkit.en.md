@@ -11,7 +11,7 @@ Supports one-on-one and group audio/video calls.
 
 ## Initialization
 
-The `appKey` parameter must be provided during initialization. Other registered callback parameters are also crucial and require interaction with the audio/video library. Refer to the `GlobalContainerProps` attribute description for more details.
+The `appId` parameter must be provided during initialization. Other registered callback parameters are also crucial and require interaction with the audio/video library. Refer to the `GlobalContainerProps` attribute description for more details.
 
 See `example/src/demo/App.tsx` Sample [source code](../../../example/src/demo/App.tsx)。
 

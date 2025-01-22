@@ -106,7 +106,7 @@ function App(): JSX.Element {
   return (
     <UIKit
       options={{
-        appKey: 'foo',
+        appId: '<your app ID>',
       }}
     >
       {/* app component */}

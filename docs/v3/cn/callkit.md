@@ -11,7 +11,7 @@
 
 ## 初始化
 
-必须填写参数 `appKey`。其它注册回调参数也非常重要，需要和音视频库有交互。详见 `GlobalContainerProps`属性介绍。
+必须填写参数 `appId`。其它注册回调参数也非常重要，需要和音视频库有交互。详见 `GlobalContainerProps`属性介绍。
 
 详见 `example/src/demo/App.tsx` 示例[源码](../../../example/src/demo/App.tsx)。
 

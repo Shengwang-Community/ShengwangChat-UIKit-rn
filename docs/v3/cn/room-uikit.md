@@ -214,7 +214,7 @@ const light = useLightTheme(palette);
 const [theme, setTheme] = React.useState(light);
 // ...
 // 添加组件到渲染树
-<Container appKey={env.appKey} palette={palette} theme={theme} />;
+<Container appId={env.appId} palette={palette} theme={theme} />;
 // ...
 // 更改主题设置
 setTheme(theme === light ? dark : light);
@@ -245,7 +245,7 @@ UIKit 支持多国语言切换，目前内置中文和英文。支持扩展其�
 例如：想要让 UIKit 使用英文显示，可以如下设置：
 
 ```tsx
-<Container appKey={env.appKey} language={'en'} />
+<Container appId={env.appId} language={'en'} />
 ```
 
 语言设置规则：
@@ -267,7 +267,7 @@ function createLanguage(type: LanguageCode): StringSet {
 // ...
 // 设置指定语言集合，并且提供语言翻译源
 <Container
-  appKey={env.appKey}
+  appId={env.appId}
   language={'zh-Hans'}
   languageExtensionFactory={createLanguage}
 />;
@@ -304,7 +304,7 @@ export function createUIKitLanguage(type: LanguageCode): StringSet {
 // ...
 // 设置指定语言集合，并且提供语言翻译源
 <Container
-  appKey={env.appKey}
+  appId={env.appId}
   language={'fr'}
   languageBuiltInFactory={createUIKitLanguage}
   languageExtensionFactory={createAppLanguage}
@@ -317,7 +317,7 @@ export function createUIKitLanguage(type: LanguageCode): StringSet {
 
 ```tsx
 export type ContainerProps = React.PropsWithChildren<{
-  appKey: string;
+  appId: string;
   isDevMode?: boolean;
   language?: StringSetType;
   languageBuiltInFactory?: CreateStringSet;
@@ -351,7 +351,7 @@ export type RoomOption = {
 };
 ```
 
-除了 `appKey` 之外都是可选参数。
+除了 `appId` 之外都是可选参数。
 
 - isDevMode: 如果设置为 `true`，则激活日志打印等工具。
 - language: 设置当前的语言，如果没有设置，则获取系统当前的语言作为默认值。
@@ -378,7 +378,7 @@ export type RoomOption = {
 
 ```tsx
 export function App() {
-  return <Container appKey={'your app key'}>{children}</Container>;
+  return <Container appId={'your app key'}>{children}</Container>;
 }
 ```
 

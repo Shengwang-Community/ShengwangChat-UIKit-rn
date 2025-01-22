@@ -38,7 +38,7 @@ yarn yarn-prepack
 
 **Note**
 
-`yarn-prepack` is a command set primarily used to generate necessary files including `env.ts`, `version.ts`, `config.local.ts`, and `rename.ts`. The `env.ts` file also requires the `appKey` parameter to be filled.
+`yarn-prepack` is a command set primarily used to generate necessary files including `env.ts`, `version.ts`, `config.local.ts`, and `rename.ts`. The `env.ts` file also requires the `appId` parameter to be filled.
 
 #### Add Necessary Files (Optional)
 

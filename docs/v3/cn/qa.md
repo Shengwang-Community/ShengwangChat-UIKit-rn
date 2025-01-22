@@ -48,7 +48,7 @@ ios/Pods/boost/boost/container_hash/hash.hpp:131:33: No template named 'unary_fu
 
 #### 不支持 github 远程引用
 
-由于仓库是多包管理，并且由于部分文件是动态生成的，所以无法支持 git 地址引用。但是，目前提供本地打包服务。通过在指定目录（`packages/react-native-chat-uikit`），执行 `npm pack` 生成独立的 npm 包，可以放在本地使用。
+由于仓库是多包管理，并且由于部分文件是动态生成的，所以无法支持 git 地址引用。但是，目前提供本地打包服务。通过在指定目录（`packages/react-native-shengwang-chat-uikit`），执行 `npm pack` 生成独立的 npm 包，可以放在本地使用。
 
 ## 专业问题
 

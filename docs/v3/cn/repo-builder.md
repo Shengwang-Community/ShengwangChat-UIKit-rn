@@ -38,7 +38,7 @@ yarn yarn-prepack
 
 **注意**
 
-`yarn-prepack` 是命令集合，主要生成必要的文件，包括 `env.ts`, `version.ts`, `config.local.ts` 和 `rename.ts` 等。 其中 `env.ts` 还需要填写必要参数 `appKey`。
+`yarn-prepack` 是命令集合，主要生成必要的文件，包括 `env.ts`, `version.ts`, `config.local.ts` 和 `rename.ts` 等。 其中 `env.ts` 还需要填写必要参数 `appId`。
 
 #### 添加必要文件（可选）
 

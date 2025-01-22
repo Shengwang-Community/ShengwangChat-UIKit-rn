@@ -64,7 +64,7 @@ Initialization
 import { Container } from 'react-native-shengwang-chat-uikit';
 function App(): React.JSX.Element {
   return (
-    <Container options={{ appKey: appKey, autoLogin: false }}>
+    <Container options={{ appId: '<your app ID>' }}>
       {/** sub component */}
     </Container>
   );

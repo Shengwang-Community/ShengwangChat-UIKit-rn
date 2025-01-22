@@ -44,7 +44,7 @@ cd ios && pod install
 # 如果是android平台 需要运行 android项目的sync
 ```
 
-生成文件 `env.ts` 需要填写必要参数。例如：`appKey`。
+生成文件 `env.ts` 需要填写必要参数。例如：`appId`。
 
 ## 初始化介绍
 
@@ -60,7 +60,7 @@ export function App() {
   return (
     <UIKitContainer
       options={{
-        appKey: gAppKey,
+        appId: '<your app ID>',
       }}
     >
       <NavigationContainer>
@@ -477,7 +477,7 @@ export function App() {
   return (
     <UIKitContainer
       options={{
-        appKey: gAppKey,
+        appId: '<your app ID>',
       }}
       onGroupsHandler={onGroupsHandler}
       onUsersHandler={onUsersHandler}
@@ -557,7 +557,7 @@ export function App() {
   return (
     <UIKitContainer
       options={{
-        appKey: gAppKey,
+        appId: '<your app ID>',
       }}
     >
       {/* 其它设置 */}
