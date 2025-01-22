@@ -1,0 +1,38 @@
+{
+    "cSpell.words": [
+        "aftertreatment",
+        "callkeep",
+        "callkit",
+        "calllog",
+        "chatcallkit",
+        "commitlint",
+        "conv",
+        "Deleter",
+        "easemob",
+        "gradlew",
+        "IMSDK",
+        "IMUI",
+        "Intervallum",
+        "lefthook",
+        "logined",
+        "moji",
+        "navi",
+        "podspec",
+        "Pressable",
+        "rneui",
+        "RNFS",
+        "sendbird",
+        "shengwang",
+        "tabbar",
+        "uikit",
+        "uilog",
+        "Usecase",
+        "viewability",
+        "zuoyu"
+    ],
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/estuary/flow/master/flow.schema.json": "untitled:Untitled-1"
+    },
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "java.configuration.updateBuildConfiguration": "interactive"
+}

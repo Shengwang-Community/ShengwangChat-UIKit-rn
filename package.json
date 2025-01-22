@@ -1,0 +1,121 @@
+{
+  "name": "react-native-chat-library",
+  "version": "1.0.1",
+  "description": "react native multi package workspaces.",
+  "repository": "https://github.com/Shengwang-Community/ShengwangChat-UIKit-rn",
+  "author": "asteriskzuo@hotmail.com",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/react-native-chat-uikit",
+    "packages/react-native-chat-callkit",
+    "packages/react-native-chat-room",
+    "example",
+    "examples/callkit-example",
+    "examples/uikit-example",
+    "examples/room-example"
+  ],
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.0.2",
+    "@evilmartians/lefthook": "^1.2.2",
+    "commitlint": "^17.0.2",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "jest": "^28.1.1",
+    "lerna": "^7.0.1",
+    "patch-package": "^7.0.1",
+    "pod-install": "^0.1.0",
+    "prettier": "^2.0.5",
+    "typescript": "^4.5.2"
+  },
+  "scripts": {
+    "yarn-lint": "yarn workspace react-native-shengwang-chat-uikit lint && yarn workspace react-native-shengwang-chat-callkit lint && yarn workspace react-native-shengwang-chat-room lint",
+    "lerna-lint": "lerna run lint",
+    "lint": "yarn run lerna-lint",
+    "yarn-prepack": "yarn sdk-version && yarn sdk-rename && yarn sdk-config && yarn example-env && yarn example-rename && yarn workspace react-native-shengwang-chat-uikit prepack && yarn workspace react-native-shengwang-chat-callkit prepack && yarn workspace react-native-shengwang-chat-room prepack",
+    "uikit-prepack": "yarn sdk-version && yarn sdk-rename && yarn sdk-config && yarn example-env && yarn example-rename && yarn workspace react-native-shengwang-chat-uikit prepack",
+    "callkit-prepack": "yarn sdk-version && yarn sdk-rename && yarn sdk-config && yarn example-env && yarn example-rename && yarn workspace react-native-shengwang-chat-callkit prepack",
+    "room-prepack": "yarn sdk-version && yarn sdk-rename && yarn sdk-config && yarn example-env && yarn example-rename && yarn workspace react-native-shengwang-chat-room prepack",
+    "lerna-prepack": "lerna run sdk-version && lerna run sdk-rename && lerna run sdk-config && lerna run example-rename && lerna run example-env && lerna run prepack --verbose",
+    "prepack": "yarn run lerna-prepack",
+    "clean": "lerna run clean  --verbose",
+    "clean-module": "lerna run clean-module  --verbose",
+    "bootstrap": "lerna run bootstrap --verbose",
+    "sdk-version": "node scripts/generate-version.js",
+    "sdk-rename": "node scripts/generate-rename.js",
+    "sdk-config": "yarn workspace react-native-shengwang-chat-uikit gen-config && yarn workspace react-native-shengwang-chat-room gen-config",
+    "example-env": "lerna run gen-env --verbose",
+    "example-rename": "lerna run gen-rename --verbose",
+    "doctor": "lerna run doctor --verbose",
+    "postinstall": "patch-package"
+  },
+  "prettier": {
+    "quoteProps": "consistent",
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "scripts/",
+    "babel.config.js"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "preset": "react-native",
+    "testRegex": "/__tests__/.*\\.(test|spec)\\.(js|jsx|ts|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/packages/react-native-chat-uikit/lib/",
+      "<rootDir>/packages/react-native-chat-uikit/node_modules/",
+      "<rootDir>/packages/react-native-chat-callkit/lib/",
+      "<rootDir>/packages/react-native-chat-callkit/node_modules/",
+      "<rootDir>/packages/react-native-chat-room/lib/",
+      "<rootDir>/packages/react-native-chat-room/node_modules/"
+    ]
+  },
+  "engines": {
+    "node": ">=18.16.0"
+  },
+  "packageManager": "yarn@1.22.19",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "build",
+          "chore",
+          "ci",
+          "docs",
+          "feat",
+          "fix",
+          "perf",
+          "refactor",
+          "revert",
+          "style",
+          "test",
+          "tag",
+          "example",
+          "test"
+        ]
+      ]
+    }
+  }
+}
